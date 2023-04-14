@@ -1,0 +1,2113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title> التصنيفات | My shop </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="csrf-token" content="NEYsZEwdv2Ohca5JDObqerXwGy9klI1E7NwIg5EK">
+
+    <link rel="shortcut icon" href="https://cdn.mapp.sa/cPanel/images/favicon.ico">
+
+    <link href="https://cdn.mapp.sa/cPanel/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://cdn.mapp.sa/cPanel/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.mapp.sa/cPanel/css/fontawesome5.min.css">
+    <link rel="stylesheet" href="https://cdn.mapp.sa/cPanel/css/all.min.css">
+    <link href="https://cdn.mapp.sa/cPanel/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.mapp.sa/cPanel/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.mapp.sa/cPanel/libs/switchery/switchy.min.css">
+    <link rel="stylesheet" href="https://cdn.mapp.sa/cPanel/libs/pretty-checkboxs/pretty-checkbox.min.css">
+    <link rel="stylesheet" href="https://cdn.mapp.sa/cPanel/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="https://cdn.mapp.sa/cPanel/css/app-rtl.css?version=1680776865">
+    <link rel="stylesheet" href="https://cdn.mapp.sa/cPanel/css/loader.css">
+    <link rel="stylesheet" href="https://cdn.mapp.sa/cPanel/css/validationMessages.css">
+    <link rel="stylesheet" href="https://cdn.mapp.sa/cPanel/css/sweetalert.css">
+    <link rel="stylesheet" href="https://cdn.mapp.sa/cPanel/css/adminLayout.css?version=1680776865">
+    <link rel="stylesheet" href="https://cdn.mapp.sa/cPanel/css/custom-app-rtl.css?version=1680776865">
+    <style>
+
+.sa-confirm-button-container .btn-success {
+  background: linear-gradient(to bottom, #00ff80, #00ff85);
+  border-color: #00ff80!important;
+}
+
+
+
+        
+.multi-action .action-button {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background: linear-gradient(to left, #00ff80, #00ff85);
+    font-size: 24px;
+    color: #fff;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .16), 0 2px 5px 0 rgba(0, 0, 0, .26);
+    transition: all .3s;
+}
+
+.multi-action .action-button:hover {
+    background: linear-gradient(to left, #00ff85, #00ff80);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.multi-action .actions {
+    position: absolute;
+    list-style: none inside none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    float: left;
+    background-color: transparent;
+    top: 8px;
+    left: 8px;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.multi-action .actions li {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(to left, #00ff80, #00ff85);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .16), 0 2px 5px 0 rgba(0, 0, 0, .26);
+    margin: 0;
+    color: #fff;
+    transition: all .3s;
+    transform: scale(.3);
+}
+
+.multi-action .actions li:hover {
+    background: linear-gradient(to left, #00ff85, #00ff80);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1);
+}
+
+.btn-primary {
+    background: linear-gradient(to left,rgba(0, 255, 128, 0.95) 0%,rgba(0, 255, 133, 0.95) 90%);
+    color: #fff!important;
+    background-color: #00ff80!important;
+    border-color: #00ff80!important;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .16), 0 2px 5px 0 rgba(0, 0, 0, .26);
+}
+
+.has-spinner-link {
+    position: relative;
+}
+
+.btn {
+    color: #fff;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #393ba7;
+    border-color: #393ba7;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #6c757d;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.45rem 0.9rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: 0.15rem;
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+}
+
+
+#sidebar-menu .metismenu .nav-second-level {
+    background: linear-gradient(180deg, #02e473 36%, #079b51 100%);
+    border-radius: 24px;
+    margin-top: 10px;
+    padding: 0;
+}
+
+#sidebar-menu>ul>li:not(.withDropdown)>a:hover, #sidebar-menu>ul>li:not(.withDropdown).active>a {
+    background: #02a757;
+    border-radius: 24px;
+}
+
+.left-side-menu {
+    width: 250px;
+    background: linear-gradient(180deg, #02e473 36%, #079b51 100%);
+    padding-top: 15px;
+}
+
+        label.error {
+            color: red;
+            font-size: 10px;
+        }
+
+        .table-responsive table thead {
+            border-right: 1px solid #dee2e6;
+            border-left: 1px solid #dee2e6;
+        }
+
+        .padiOverlayCustom .modal-header {
+            border-bottom: 0;
+        }
+
+        .padiOverlayCustom .modal-body img {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .padiOverlayCustom .modal-title .mataj img {
+            width: 40px;
+        }
+
+        @media (min-width: 576px) {
+            .padiOverlayCustom .modal-dialog {
+                max-width: 600px;
+            }
+        }
+
+        .padiOverlay {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            padding: 0px;
+            margin: 0px;
+            visibility: visible;
+            overflow-x: hidden;
+            overflow-y: auto;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+        }
+
+        .padiFade {
+            zoom: 1;
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            height: 100%;
+            z-index: 1041;
+        }
+
+        .padiPop4Overlay h1,
+        .padiPop4Overlay h2,
+        .padiPop4Overlay h3,
+        .padiPop4Overlay div,
+        .padiPop4Overlay ul,
+        .padiPop4Overlay li,
+        .padiPop4Overlay ol,
+        .padiPop4Overlay p,
+        .padiPop4Overlay a,
+        .padiPop4Overlay input,
+        .padiPop4Overlay input[type=text],
+        .padiPop4Overlay input[type=email] {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: none;
+            font-size: 100%;
+            vertical-align: middle;
+            float: none;
+            width: auto;
+            height: auto;
+            background-image: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+            /*
+                        list-style: none;
+            */
+            -webkit-text-shadow: none !important;
+            -moz-text-shadow: none !important;
+            text-shadow: none !important;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .padiPop4Overlay *,
+        .padiPop4Overlay *:before,
+        .padiPop4Overlay *:after {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .padiPop4Wrap {
+            position: absolute;
+            visibility: visible;
+            z-index: 1602;
+            padding: 0px;
+            left: 50%;
+            margin-left: -300px;
+            top: 50%;
+            margin-top: -200px;
+            max-height: 400px;
+            width: 600px;
+            background-color: white;
+            background-repeat: no-repeat;
+            background-position: center top;
+            border-radius: 7px;
+        }
+
+        .padiPop4Overlay .padiContent::-webkit-scrollbar {
+            width: 8px;
+            height: 5px;
+        }
+
+        .padiPop4Overlay .padiContent::-webkit-scrollbar-track {
+            background: #ffffff;
+        }
+
+        .padiPop4Overlay .padiContent::-webkit-scrollbar-thumb {
+            background: #333;
+        }
+
+        .padiPop4Overlay .padiContent::-webkit-scrollbar-thumb:hover {
+            background: #333;
+        }
+
+        .padiPop4Overlay {
+            background-color: transparent;
+            background-image: none;
+            background-repeat: no-repeat;
+            padding: 0px;
+            -moz-border-radius: 0;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+            box-shadow: 0 0 0px rgba(0, 0, 0, 0.8);
+            -webkit-box-shadow: 0 0 0px rgba(0, 0, 0, 0.8);
+            -moz-box-shadow: 0 0 0px rgba(0, 0, 0, 0.8);
+            -moz-background-clip: padding;
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+            position: static;
+            margin: 0;
+            z-index: 1060;
+        }
+
+        .padiPop4Overlay .mataj {
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+        }
+
+        .padiPop4Overlay .mataj p {
+            margin-right: 15px;
+            margin-bottom: 0 !important;
+        }
+
+        .padiPop4Overlay a {
+            color: inherit;
+            text-decoration: underline;
+            border-bottom: none;
+        }
+
+        .padiPop4Overlay a:hover {
+            color: inherit;
+            text-decoration: underline;
+            border-bottom: none;
+        }
+
+        .padiPop4Overlay div.padiPopupContent {
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 0px;
+            border-radius: 0px;
+            margin-bottom: 0;
+            -moz-background-clip: padding;
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+            color: #2d2d2d;
+            background-color: #fff;
+            height: auto;
+        }
+
+        .padiPop4Overlay .padiContent {
+            padding: 5px 45px 20px 45px;
+            color: #2d2d2d;
+            overflow-y: scroll;
+            max-height: 400px;
+            /*
+                        text-align: center;
+            */
+        }
+
+        .padiPop4Overlay .padiContent p {
+            margin-top: 0;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .padiClearfix:after {
+            content: " ";
+            /* Older browser do not support empty content */
+            visibility: hidden;
+            display: block;
+            height: 0;
+            clear: both;
+        }
+
+        .padiPop4Wrap a.padiClose {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            top: 20px;
+            right: 20px;
+            padding: 0;
+            margin: 0;
+            display: block;
+            background-image: url(http://www.jaknaetrzby.cz/style/padiact/close.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            border: none;
+            opacity: 1;
+            text-indent: -1000em;
+            z-index: 2000;
+        }
+
+        .padiPop4Wrap a.padiClose:hover {
+            background-size: 16px 16px;
+        }
+
+        /* THE FORM FIELDS */
+
+        .padiPop4Overlay form {
+            position: relative;
+            padding: 0px 0 20px 0px;
+            margin-top: 10px;
+            display: block;
+        }
+
+        fieldset.padiSet label {
+            font-size: 12px;
+            line-height: 18px;
+            color: #000000;
+        }
+
+        .padiPop4Overlay form p.padiCheckTerms {
+            width: 330px;
+            display: inline-block;
+            text-align: left;
+            padding: 3px 0 0 0;
+            margin: 0;
+        }
+
+        .padiCheckTerms input[type=checkbox] {
+            visibility: hidden;
+        }
+
+        .padiCheckTerms label {
+            display: inline-block;
+            height: 18px;
+            font-size: 12px;
+            line-height: 18px;
+            padding: 0 0 0 20px;
+            color: #000000;
+            margin: 0;
+            vertical-align: middle;
+            background: url(http://data.acomware.cz/popup/dotykacka/radio.png) 0px 0px no-repeat;
+            cursor: pointer;
+            opacity: 1;
+        }
+
+        .padiCheckTerms label:hover {
+            background-position: 0px -18px;
+        }
+
+        .padiCheckTerms input[type=checkbox]:checked+label {
+            background-position: 0px -36px;
+        }
+
+        .padiPop4Overlay form .padiField {
+            font-family: 'Open Sans', Helvetica, Arial, serif;
+            width: 500px;
+            height: 40px;
+            padding: 4px 10px 0px 10px;
+            font-size: 16px;
+            font-weight: normal;
+            font-style: italic;
+            text-align: left;
+            line-height: 18px;
+            color: #000000;
+            vertical-align: middle;
+            background-color: #ffffff;
+            background-image: none;
+            border: 1px solid #ee8654;
+            -webkit-transition: opacity ease-in-out .15s, box-shadow ease-in-out .15s;
+            -moz-transition: opacity ease-in-out .15s, box-shadow ease-in-out .15s;
+            transition: opacity ease-in-out .15s, box-shadow ease-in-out .15s;
+            margin: 0px;
+            opacity: 1;
+        }
+
+        .padiPop4Overlay form .padiCheck {
+            margin: 0px 4px 2px 4px;
+            vertical-align: bottom;
+        }
+
+        .padiPop4Overlay form .padiField:focus {
+            outline: 0;
+            color: #000000;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 255, 255, 0.6);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 255, 255, 0.6);
+        }
+
+        .padiPop4Overlay form .padiLabel {
+            font-weight: bold;
+        }
+
+        .padiPop4Overlay form .padiRadioLabel {
+            font-weight: normal !important;
+            font-size: 12px;
+        }
+
+        .padiPop4Overlay form option {
+            color: #333;
+        }
+
+        .padiPop4Overlay form .padiRadio {
+            margin-bottom: 1.4em;
+            padding: 0;
+            list-style: none;
+        }
+
+        .padiPop4Overlay form .padiRadio li {
+            margin: 3px 0px;
+        }
+
+        .padiPop4Overlay form .padiButton:hover {
+            border-color: #0081B3;
+            opacity: 0.9;
+        }
+
+        .padiPop4Overlay form .padiButton:active {
+            outline: 0;
+            -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
+            -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
+            box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
+        }
+
+        .padiPop4Overlay form .padiButton {
+            display: inline-block;
+            color: #ffffff;
+            background-color: #36424a;
+            padding: 0 6px;
+            margin: 5px 0 0 0px;
+            font-size: 12px;
+            width: 165px;
+            height: 40px;
+            font-weight: bold;
+            line-height: 16px;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            border: 0px solid #3399CC;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            outline: none;
+            opacity: 1;
+            font-family: 'Open Sans', Helvetica, Arial, serif;
+        }
+
+        .padiPop4Overlay form .padiLabel {
+            font-size: 12px;
+            display: block;
+            margin: 5px 0;
+        }
+
+        .padiPop4Overlay form p {
+            font-size: 13px;
+        }
+
+        .padiPop4Overlay p.privacy {
+            color: #000000;
+            width: 510px;
+            height: 45px;
+            font-size: 12px;
+            font-weight: normal;
+            margin: 0px;
+            padding: 0px;
+            text-shadow: none;
+            text-decoration: none;
+            text-align: center;
+            line-height: 15px;
+        }
+
+        .padiPreload {
+            display: inline-block;
+            position: absolute;
+            top: 12px;
+            left: 475px;
+            padding: 0px;
+        }
+
+        .table-responsive {
+            /*            overflow-x: hidden;*/
+            overflow-y: hidden;
+        }
+
+        .edit-back-btn {
+            background-color: #de3333 !important;
+            border-color: #de3333 !important;
+            border: none !important;
+        }
+
+        .edit-save-btn {
+            background: linear-gradient(to left, rgba(111, 113, 205, 0.95) 0%, rgba(70, 72, 159, 0.95) 90%);
+            border-color: #7375D2 !important;
+            border: none !important;
+            padding: .57rem .9rem;
+        }
+
+        .alert-danger {
+            color: #eb6460 !important;
+            background-color: rgba(253, 100, 96, .1) !important;
+            border: none !important;
+        }
+
+        .alert-danger .close {
+            color: #eb6460 !important;
+            opacity: 1;
+        }
+
+        .alert-success {
+            /* color: white !important;
+            background-color: #84b37b !important;
+            border: none !important; */
+            background-color: #66ce67 !important;
+            border-color: #66ce67 !important;
+            /* border: none !important; */
+            box-shadow: -1px 0px 20px 0px rgba(0, 0, 0, 0.07);
+            color: #fff !important;
+            /* color:#2e582f !important;
+            background-color: #d9ebdb !important;
+            border-color: #b7d5ba !important; */
+        }
+
+        .alert-warning .close {
+            color: #806027 !important;
+            opacity: 1;
+        }
+
+        .alert-success .close {
+            color: #fff !important;
+            opacity: 1;
+            /* font-size: 13px;
+            color: #2e582f !important;
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%); */
+        }
+
+        .close {
+            color: white !important;
+        }
+
+        .offer-color {
+            color: #393ba7;
+        }
+
+        .cursor-none {
+            cursor: unset !important;
+        }
+
+        .done-setting {
+            background-color: #3cd8a6 !important;
+            border: none !important;
+        }
+
+        .sweet-alert .btn-success:focus {
+            box-shadow: unset !important;
+        }
+
+        .sa-button-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .sa-button-container button {
+            font-size: 15px;
+        }
+
+        .sa-button-container .btn-danger {
+            background-color: #de3333;
+            border-color: #de3333;
+        }
+
+        #adminList .highlight {
+            background: #ff0;
+            color: #000;
+            line-height: 11px;
+        }
+
+        .applePayOrderBtn button {
+            border: 1px solid #000;
+            color: #fff !important;
+            background-color: #000;
+            padding: 4px 20px;
+            min-height: 44px;
+            border-radius: 4px;
+        }
+
+        .applePayOrderBtn button::after {
+            display: none;
+        }
+
+        .applePayCard .line-with-words {
+            margin-bottom: 25px;
+            margin-top: 25px;
+            display: flex;
+            align-items: center;
+        }
+
+        .line-with-words .line {
+            background: #c9c9c9;
+            height: 1px;
+            width: 100%;
+        }
+
+        .line-with-words .line {
+            background: #c9c9c9;
+            height: 1px;
+            width: 100%;
+        }
+
+        .line-with-words .title {
+            font-size: 15px;
+            min-width: max-content;
+            padding: 0 10px;
+            font-weight: 600;
+        }
+
+        .completePayOnlineBtn {
+            max-width: 95%;
+            margin: 0 auto;
+            padding: 4px 20px;
+            min-height: 43px;
+            border-radius: 4px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.mapp.sa/cPanel/css/dark-theme.css?version=1680776865">
+    <link rel="stylesheet" href="https://cdn.mapp.sa/cPanel/css/styles/category/index_style.css?version=1680776865">
+
+    <script>
+        (function(h, o, t, j, a, r) {
+            h.hj = h.hj || function() {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            };
+            h._hjSettings = {
+                hjid: 1997737,
+                hjsv: 6
+            };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150819998-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-150819998-1');
+    </script>
+    <script>
+        // setTimeout(function () {
+        //     $('.alert-message').fadeOut('fast');
+        // }, 5000);
+    </script>
+</head>
+
+<body class="">
+
+    <div id="wrapper">
+
+        <div class="navbar-custom navbar-custom-light cPanelNav">
+            <ul class="list-unstyled topnav-menu float-right mb-0">
+                <li class="dropdown notification-list store-notification-list-193008">
+                    <a class="nav-link dropdown-toggle waves-effect notifications_count" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+<span class="kt-pulse">
+<i class="fi-rr-bell" style="font-size: 21px;color: #AEB5BC;"></i>
+<span class="kt-pulse__ring warning" id="notifi_kt_pulse" style="display: none;"></span>
+</span>
+<span id="notifications_count_badge">
+<span data-count="0" class="badge badge-danger rounded-circle noti-icon-badge" style="display: none">0</span>
+</span>
+</a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+
+                        <div class="dropdown-item noti-title">
+                            <h5 class="m-0">
+                                <span class="float-right">
+</span>الإشعارات
+                            </h5>
+                        </div>
+                        <div class="slimscroll noti-scroll ">
+
+                            <a class="dropdown-item notify-item active">
+                                <p class="notify-details">لا يوجد إشعارات</p>
+                            </a>
+
+                        </div>
+
+                        <a href="https://mapp.sa/admin/notification" class="dropdown-item text-center text-primary notify-item notify-all">
+عرض الكل
+<i class="fi-arrow-right"></i>
+</a>
+                    </div>
+                </li>
+                <li class="dropdown notification-list">
+                    <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+<i class="fi-rr-grid" style="font-size: 21px;color: #AEB5BC;"></i>
+</a>
+                    <div class="dropdown-menu dropdown-menu-right grid-dropdown">
+                        <a class="dropdown-item user_item wallet-wrapper">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20">
+<path id="wallet-3" d="M21,6H5A3.012,3.012,0,0,1,2.765,5,3,3,0,0,1,5,4H23a1,1,0,0,0,0-2H5A5,5,0,0,0,0,7V17a5,5,0,0,0,5,5H21a3,3,0,0,0,3-3V9A3,3,0,0,0,21,6Zm1,13a1,1,0,0,1-1,1H5a3,3,0,0,1-3-3V7A5.012,5.012,0,0,0,5,8H21a1,1,0,0,1,1,1Zm-2-5a1,1,0,1,1-1-1A1,1,0,0,1,20,14Z" transform="translate(0 -2)" fill="#9ba5ac" />
+</svg>
+                            </div>
+                            <span>المحفظة</span>
+                            <span class="soon">قريباً</span>
+                        </a>
+                        <a href="https://mapp.sa/admin/partnerServiceCategory" class="dropdown-item user_item">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28.632" height="28.631" viewBox="0 0 28.632 28.631">
+<defs>
+<clipPath id="clip-path">
+<rect id="Rectangle_50135" data-name="Rectangle 50135" width="28.632" height="28.631" transform="translate(-3 -3)" fill="#9ba5ac" stroke="#9ba5ac" stroke-width="0.1" />
+</clipPath>
+</defs>
+<g id="Group_52606" data-name="Group 52606" transform="translate(3 3)" clip-path="url(#clip-path)">
+<path id="Path_50225" data-name="Path 50225" d="M8.131,0A6.285,6.285,0,0,1,9.188.408a2.427,2.427,0,0,1,1.232,2.14q.033,2.66,0,5.321a2.584,2.584,0,0,1-2.553,2.553q-2.649.027-5.3,0A2.591,2.591,0,0,1,.039,8.231.541.541,0,0,0,0,8.131V2.3a.533.533,0,0,0,.038-.1A2.487,2.487,0,0,1,1.314.361,6.4,6.4,0,0,1,2.3,0Zm.53,5.214q0-1.226,0-2.451a.874.874,0,0,0-.984-1H2.752a.87.87,0,0,0-.984.973q0,2.473,0,4.947a.867.867,0,0,0,.962.973q2.485,0,4.969,0a.867.867,0,0,0,.962-.973q0-1.237,0-2.474" fill="#9ba5ac" stroke="#9ba5ac" stroke-width="0.1" />
+<path id="Path_50226" data-name="Path 50226" d="M0,222.53a6.331,6.331,0,0,1,.4-1.039,2.427,2.427,0,0,1,2.152-1.251q2.661-.034,5.323,0a2.584,2.584,0,0,1,2.551,2.558q.026,2.65,0,5.3a2.588,2.588,0,0,1-2.573,2.559q-2.628.024-5.257,0a2.6,2.6,0,0,1-2.555-2.194.539.539,0,0,0-.039-.1V222.53m8.661,2.939q0-1.248,0-2.5A.867.867,0,0,0,7.7,222q-2.485,0-4.969,0a.862.862,0,0,0-.962.951q0,2.5,0,4.991a.862.862,0,0,0,.962.951q2.485,0,4.969,0a.867.867,0,0,0,.962-.973q0-1.226,0-2.451" transform="translate(0 -208.036)" fill="#9ba5ac" stroke="#9ba5ac" stroke-width="0.1" />
+<path id="Path_50227" data-name="Path 50227" d="M228.323,0a3.069,3.069,0,0,1,1.288.539,2.538,2.538,0,0,1,1.046,2.028c.019,1.767.022,3.535,0,5.3a2.61,2.61,0,0,1-2.545,2.552q-2.661.035-5.324,0a2.61,2.61,0,0,1-2.545-2.552q-.033-2.65,0-5.3A2.623,2.623,0,0,1,222.454.039a.868.868,0,0,0,.124-.04Zm.574,5.216q0-1.226,0-2.452a.9.9,0,0,0-1-1q-2.452,0-4.9,0a.9.9,0,0,0-.99.982q0,2.463,0,4.926a.9.9,0,0,0,.987.985q2.452,0,4.9,0a.9.9,0,0,0,1-.993q0-1.226,0-2.452" transform="translate(-208.04 0.001)" fill="#9ba5ac" stroke="#9ba5ac" stroke-width="0.1" />
+<path id="Path_50228" data-name="Path 50228" d="M230.772,225.532c0,.832,0,1.664,0,2.5a2.65,2.65,0,0,1-2.728,2.737q-2.484,0-4.969,0a2.649,2.649,0,0,1-2.731-2.733q0-2.485,0-4.969a2.648,2.648,0,0,1,2.716-2.725q2.5-.006,4.991,0a2.649,2.649,0,0,1,2.72,2.722c0,.824,0,1.649,0,2.473m-8.661.019c0,.825,0,1.649,0,2.474a.892.892,0,0,0,.978.972q2.463,0,4.926,0a.9.9,0,0,0,.988-.984q0-2.463,0-4.926a.9.9,0,0,0-.989-.983q-2.452,0-4.9,0a.9.9,0,0,0-1,.995q0,1.226,0,2.452" transform="translate(-208.147 -208.14)" fill="#9ba5ac" stroke="#9ba5ac" stroke-width="0.1" />
+</g>
+</svg>
+                            </div>
+                            <span>خدمات الشركاء</span>
+                        </a>
+                        <a href="https://help.mapp.sa" target="_blank" class="dropdown-item user_item">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<path id="life-ring-3" d="M21.155,19.741a11.954,11.954,0,0,0,0-15.482l.86-.86A1,1,0,0,0,20.6,1.985l-.86.86a11.954,11.954,0,0,0-15.482,0l-.86-.86A1,1,0,1,0,1.985,3.4l.86.86a11.954,11.954,0,0,0,0,15.482l-.86.86A1,1,0,1,0,3.4,22.015l.86-.86a11.954,11.954,0,0,0,15.482,0l.86.86A1,1,0,1,0,22.015,20.6ZM22,12a9.949,9.949,0,0,1-2.262,6.324l-3.571-3.571a4.966,4.966,0,0,0,0-5.506l3.571-3.571A9.949,9.949,0,0,1,22,12ZM9,12a3,3,0,1,1,3,3,3,3,0,0,1-3-3ZM12,2a9.949,9.949,0,0,1,6.324,2.262L14.753,7.833a4.966,4.966,0,0,0-5.506,0L5.676,4.262A9.949,9.949,0,0,1,12,2ZM2,12A9.949,9.949,0,0,1,4.262,5.676L7.833,9.247a4.966,4.966,0,0,0,0,5.506L4.262,18.324A9.949,9.949,0,0,1,2,12ZM12,22a9.949,9.949,0,0,1-6.324-2.262l3.571-3.571a4.966,4.966,0,0,0,5.506,0l3.571,3.571A9.949,9.949,0,0,1,12,22Z" transform="translate(0 0)" fill="#9ba5ac" />
+</svg>
+                            </div>
+                            <span>المساعدة</span>
+                        </a>
+                    </div>
+                </li>
+                <li class="dropdown notification-list">
+                    <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+<img src="https://cdn.mapp.sa/cPanel/images/users/dcaf.png" alt="MIKE DEEB" class="rounded-circle">
+</a>
+                    <div class="dropdown-menu dropdown-menu-right profile-dropdown p-0">
+                        <div class="user-quick-info">
+                            <span>Ali Asri</span>
+                        </div>
+                        <div class="user-membership">
+                            <span class="badge badge-primary">
+الباقة البداية
+|
+362 يوم
+</span>
+                        </div>
+
+                        <a href="https://mapp.sa/admin/profile/show" class="dropdown-item user_item">
+<i class="fi-rr-user"></i>
+<span>الملف الشخصي</span>
+</a>
+                        <a class="toggle-theme dropdown-item user_item">
+<span>
+<i class="fi-rr-moon"></i>
+<span>النمط الداكن</span>
+</span>
+<label class="switchy switchy-sm">
+<input id="dark-theme-toggle" type="checkbox" />
+</label>
+</a>
+
+                        <a href="#" onclick="event.preventDefault(); document.getElementById('logoutFormDiv').submit();" class="dropdown-item user_item">
+ <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 16.366 16.486" style="margin-bottom: 3px;
+                   margin-left: 5px;">
+<g id="on-off-button" transform="translate(-0.089)">
+<path id="Path_9072" data-name="Path 9072" d="M6.995,7.664V1.277a1.277,1.277,0,1,1,2.555,0V7.664a1.277,1.277,0,1,1-2.555,0Zm6.341-5.791a.958.958,0,0,0-1.186,1.5,6.267,6.267,0,1,1-7.755,0,.958.958,0,1,0-1.187-1.5,8.183,8.183,0,1,0,10.129,0Z" transform="translate(0)" fill="#f22462"></path>
+</g>
+</svg>
+<span>تسجيل الخروج</span>
+</a>
+                        <form id="logoutFormDiv" action="file:///C:/Users/user/Desktop/www.mapp.sa/mapp.sa/login.html" method="POST" style="display: none;">
+                            <input type="hidden" name="_token" value="NEYsZEwdv2Ohca5JDObqerXwGy9klI1E7NwIg5EK"> </form>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                <li>
+                    <button class="button-menu-mobile waves-effect waves-light">
+<span></span>
+<span></span>
+<span></span>
+</button>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="left-side-menu cPanelMenu">
+            <div class="slimscroll-menu">
+
+                <div id="sidebar-menu">
+                    <div class="logo-bx">
+                        <div class="logo ">
+                            <span class="logo-lg">
+<span class="logoCustom">
+<img src="https://cdn.mapp.sa/matajerLandingPage/img/defaultLogo.png" alt="logo">
+</span>
+                            <span style="color: #fff;padding:0 9px;position: relative;top: -1px;">
+<span style="position: relative;
+                                            top: 6px;">Ali Asri </span>
+                            <div class="store-demo-wrapper">
+                                <a href="https://mapp.sa/apd" target="_blank" class="storeDemo">
+رابط المتجر
+<i class="fe-external-link arrow"></i>
+</a>
+                            </div>
+                            </span>
+                            </span>
+                            <span class="logo-sm col-6 col-xl-3">
+<span class="logo-sm-text-dark">
+<img src="https://cdn.mapp.sa/matajerLandingPage/img/defaultLogo.png" width="50" alt="">
+</span>
+                            </span>
+                        </div>
+                    </div>
+                    <ul class="metismenu" id="side-menu">
+                        <li>
+                            <a href="file:///C:/Users/user/Desktop/www.mapp.sa/mapp.sa/iindex.html">
+<i class="fi-rr-home"></i>
+<span> الرئيسية </span>
+</a>
+                        </li>
+                        <li class="withDropdown">
+                            <a href="javascript: void(0);">
+<img src="https://cdn.mapp.sa/cPanel/images/productss.svg" alt="">
+<span> المنتجات </span>
+<span class="menu-arrow"></span>
+</a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li>
+                                    <a href="file:///C:/Users/user/Desktop/www.mapp.sa/mapp.sa/product.html">المنتجات</a>
+                                </li>
+                                <li>
+                                    <a href="file:///C:/Users/user/Desktop/www.mapp.sa/mapp.sa/category.html">التصنيفات</a>
+                                </li>
+                                <li>
+                                    <a href="file:///C:/Users/user/Desktop/www.mapp.sa/mapp.sa/tradeMark.html">الماركات</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="file:///C:/Users/user/Desktop/www.mapp.sa/mapp.sa/order.html">
+<i class="fi-rr-box"></i>
+<span> الطلبات </span>
+</a>
+                        </li>
+                        <li>
+                            <a href="file:///C:/Users/user/Desktop/www.mapp.sa/mapp.sa/client.html">
+<svg id="Layer_1" height="18" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" fill="#fff">
+<path d="m7.5 13a4.5 4.5 0 1 1 4.5-4.5 4.505 4.505 0 0 1 -4.5 4.5zm0-7a2.5 2.5 0 1 0 2.5 2.5 2.5 2.5 0 0 0 -2.5-2.5zm7.5 17v-.5a7.5 7.5 0 0 0 -15 0v.5a1 1 0 0 0 2 0v-.5a5.5 5.5 0 0 1 11 0v.5a1 1 0 0 0 2 0zm9-5a7 7 0 0 0 -11.667-5.217 1 1 0 1 0 1.334 1.49 5 5 0 0 1 8.333 3.727 1 1 0 0 0 2 0zm-6.5-9a4.5 4.5 0 1 1 4.5-4.5 4.505 4.505 0 0 1 -4.5 4.5zm0-7a2.5 2.5 0 1 0 2.5 2.5 2.5 2.5 0 0 0 -2.5-2.5z"></path>
+</svg>
+<span> العملاء </span>
+</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" onclick="swal({
+                        type: 'warning',
+                        title:  ' هذه الخاصية غير متاحه فى باقتك , الرجاء ترقية باقتك لباقة أعلى لإتاحتها',
+                        confirmButtonText: 'الإطلاع على الباقات',
+                        cancelButtonText: 'إلغاء',
+                        showCancelButton: true,
+                        confirmButtonClass: 'btn-success',
+                        closeOnConfirm: false,
+                        },
+                        function(){
+                        window.location.href = 'subscriptionPlan';
+                        });">
+<i class="fi-rr-chart-pie-alt"></i>
+<span> التقارير
+</span>
+</a>
+                        </li>
+                        <li class="withDropdown">
+                            <a href="javascript: void(0);">
+<i class="fi-rr-megaphone"></i>
+<span> التسويق</span>
+<span class="menu-arrow"></span>
+</a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li>
+                                    <a href="#marketers">
+التسويق بالعمولة
+</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" onclick="swal({
+                                                        type: 'warning',
+                                                        title:  ' هذه الخاصية غير متاحه فى باقتك , الرجاء ترقية باقتك لباقة أعلى لإتاحتها',
+                                                        confirmButtonText: 'الإطلاع على الباقات',
+                                                        cancelButtonText: 'إلغاء',
+                                                        showCancelButton: true,
+                                                        confirmButtonClass: 'btn-success',
+                                                        closeOnConfirm: false,
+                                                        },
+                                                        function(){
+                                                        window.location.href = 'subscriptionPlan';
+                                                        });">
+<span> السلات المتروكة </span>
+</a>
+                                </li>
+                                <li>
+                                    <a href="#coupon">كوبونات الخصم</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="file:///C:/Users/user/Desktop/www.mapp.sa/mapp.sa/setting.html">
+<i class="fi-rr-settings"></i>
+<span> الإعدادات </span>
+</a>
+                        </li>
+                    </ul>
+                    <div class="nav-downoads text-center">
+                    </div>
+                </div>
+                <br><br>
+
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="content-page">
+            <div class="content">
+
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-12 col-no-padding">
+                            <div class="page-title-box">
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="file:///C:/Users/user/Desktop/www.mapp.sa/mapp.sa/iindex.html">الرئيسية</a></li>
+                                        <li class="breadcrumb-item active"><a href="file:///C:/Users/user/Desktop/www.mapp.sa/mapp.sa/category.html">التصنيفات</a></li>
+                                    </ol>
+                                </div>
+                                <h4 class="page-title">التصنيفات</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-no-padding">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p class="text-muted font-13">التعديل على التصنيفات الخاصة بالمنتجات</p>
+                                    <form action="https://mapp.sa/admin/category/storing" method="post" id="form">
+                                        <input type="hidden" name="_token" value="NEYsZEwdv2Ohca5JDObqerXwGy9klI1E7NwIg5EK">
+                                        <div class="product-categories-page product_specification_Category">
+                                            <div class="row justify-content-center categories_divs">
+                                            </div>
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-8 offset-md-3">
+                                                    <div class="add-field-main "><a href="javascript:void(0)" class="add_form_field_Category btn btn-primary">إضافة
+رئيسي</a></div>
+                                                </div>
+                                            </div>
+                                            <ul class="pagination pagination-rounded mt-4">
+                                            </ul>
+                                            <div class="text-left">
+                                                <button type="submit" id="save_btn" class="btn btn-primary waves-effect waves-light mt-3 has-spinner-link">
+<span class="button_text">
+حفظ
+</span>
+</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            جميع الحقوق محفوظة 2023 ©
+                            <a style="color:#00ff80 ">منصة My shop</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+
+
+    </div>
+
+
+    <div class="rightbar-overlay"></div>
+
+    <div id="loader-modal" class="loader-modal">
+
+        <b title="من فضلك الإنتظار" id="loader-modal-content">
+<img src="https://cdn.mapp.sa/cPanel/media/img/load.gif" alt="" width="22">
+جاري التحميل</b>
+    </div>
+    <script>
+        var UrlForScripts = 'https://mapp.sa';
+    </script>
+
+    <script src="https://cdn.mapp.sa/cPanel/js/vendor.min.js"></script>
+
+    <script src="https://cdn.mapp.sa/cPanel/libs/peity/jquery.peity.min.js"></script>
+    <script src="https://cdn.mapp.sa/cPanel/libs/flatpickr/flatpickr.min.js"></script>
+    <script src="https://cdn.mapp.sa/cPanel/libs/jquery-knob/jquery.knob.min.js"></script>
+    <script src="https://cdn.mapp.sa/cPanel/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <script src="https://cdn.mapp.sa/cPanel/libs/flot-charts/jquery.flot.js"></script>
+    <script src="https://cdn.mapp.sa/cPanel/libs/flot-charts/jquery.flot.time.js"></script>
+    <script src="https://cdn.mapp.sa/cPanel/libs/flot-charts/jquery.flot.tooltip.min.js"></script>
+    <script src="https://cdn.mapp.sa/cPanel/libs/flot-charts/jquery.flot.pie.js"></script>
+    <script src="https://cdn.mapp.sa/cPanel/libs/flot-charts/jquery.flot.selection.js"></script>
+    <script src="https://cdn.mapp.sa/cPanel/libs/flot-charts/jquery.flot.crosshair.js"></script>
+    <script src="https://cdn.mapp.sa/cPanel/libs/d3/d3.min.js"></script>
+    <script src="https://cdn.mapp.sa/cPanel/libs/c3/c3.min.js"></script>
+    <script src="https://cdn.mapp.sa/cPanel/js/pages/dashboard-1.init.js"></script>
+    <script src="https://cdn.mapp.sa/cPanel/js/pages/flot.init.js"></script>
+    <script src="https://cdn.mapp.sa/cPanel/js/pages/c3.init.js"></script>
+    <script src="https://cdn.mapp.sa/cPanel/js/app.min.js"></script>
+    <script src="https://cdn.mapp.sa/cPanel/js/jquery.validate.min.js"></script>
+    <script src="https://cdn.mapp.sa/cPanel/js/validate.js"></script>
+    <script src="https://cdn.mapp.sa/cPanel/js/sweetalert.js"></script>
+    <script src="https://cdn.mapp.sa/cPanel/libs/switchery/switchy.min.js"></script>
+    <script src="https://cdn.mapp.sa/cPanel/js/clipboard.js"></script>
+
+
+    <script type="text/javascript">
+        jQuery.extend(jQuery.validator.messages, {
+            required: "هذا الحقل مطلوب",
+
+        });
+        $(document).on('click', '.doBtn', function(e) {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            e.preventDefault();
+            var id = $(this).data('id');
+            var desc = $(this).data('desc');
+            var type = $(this).data('type');
+            var url = $(this).data('url');
+            var btn = $(this);
+
+            swal({
+                    title: "تأكيد العملية!",
+                    text: desc,
+                    type: "warning",
+                    cancelButtonColor: '#d33',
+                    confirmButtonClass: 'btn btn-success',
+                    cancelButtonClass: 'btn btn-gray',
+                    buttonsStyling: true,
+                    cancelButtonText: 'إلغاء',
+                    confirmButtonText: "تأكيد !",
+                    showCancelButton: true
+                },
+                function() {
+                    $.ajax({
+                        type: type,
+                        url: url,
+                        success: function(data) {
+                            if (data.status === 0) {
+                                swal({
+                                    type: 'warning',
+                                    title: data.message,
+                                    timer: 4000
+                                });
+                            } else {
+                                if (url.indexOf('delete') !== -1) {
+                                    swal({
+                                            title: 'تم تنفيذ العملية بنجاح',
+                                            text: 'تم تنفيذ العملية بنجاح',
+                                            type: 'success',
+                                            timer: 2000,
+                                            showConfirmButton: true,
+                                            confirmButtonText: "تم",
+                                            confirmButtonClass: 'btn btn-success',
+                                            buttonsStyling: true,
+                                        },
+                                        function() {
+                                            var item = $('#item-' + id);
+                                            $('#item-' + id).fadeOut(500);
+                                            $('#item-' + id).remove();
+                                            // console.log(data.categories);
+                                            btn.parent().remove();
+
+                                        }
+                                    )
+                                } else {
+                                    swal({
+                                            title: 'تم تنفيذ العملية بنجاح',
+                                            text: data.message,
+                                            type: 'success',
+                                            timer: 2000,
+                                            showConfirmButton: true,
+                                            confirmButtonText: "تم",
+                                            confirmButtonClass: 'btn btn-success',
+                                            buttonsStyling: true,
+                                        },
+                                        function() {
+                                            btn.parent().find('.hidden').removeClass('hidden').removeClass('next');
+                                            btn.addClass('hidden').addClass('next');
+                                        });
+                                }
+
+
+                            }
+                        },
+                        error: function(data) {
+                            swal({
+                                type: 'warning',
+                                title: 'حدثت خلل أثناء عملية الحذف',
+                                timer: 4000
+                            });
+                        }
+                    });
+                });
+        });
+        $(document).ready(function() {
+            clickButton = $('.switch');
+            clickButton.on('click', function(e) {
+                var element = $(this);
+                e.preventDefault();
+                if ($(this).is(":checked")) {
+                    var url = element.data('activate_url');
+                    var desc = element.data('deactivate_desc');
+                    var sts = false;
+                } else {
+                    var url = element.data('deactivate_url');
+                    var desc = element.data('activate_desc');
+                    var sts = true;
+                }
+                console.log(url);
+                console.log(desc);
+                swal({
+                        title: desc,
+                        type: "warning",
+                        cancelButtonColor: '#c54b42',
+                        confirmButtonClass: 'btn btn-success',
+                        cancelButtonClass: 'btn btn-gray',
+                        buttonsStyling: true,
+                        // cancelTextColor: '#FFFFFF',
+                        cancelButtonText: 'إلغاء',
+                        confirmButtonText: "تأكيد !",
+                        showCancelButton: true
+                    },
+                    function(result) {
+                        console.log(result);
+                        if (result) {
+                            e.preventDefault();
+                            var id = element.data('id');
+                            $.ajaxSetup({
+                                headers: {
+                                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                }
+                            });
+                            $.ajax({
+                                method: "POST",
+                                url: url,
+                                data: {
+                                    id: id
+                                },
+                                success: function(data) {
+                                    console.log('sened');
+                                    console.log(data);
+                                    if (data.status === 0) {
+                                        swal({
+                                            type: 'error',
+                                            title: data.message,
+                                            timer: 4000
+                                        });
+                                    } else {
+                                        swal({
+                                            type: 'success',
+                                            title: data.message,
+                                            timer: 2000
+                                        })
+                                        console.log(sts + 'sts');
+                                        if (sts) {
+                                            element.prop("checked", false);
+
+                                        } else {
+                                            element.prop("checked", true);
+
+                                        }
+                                    }
+                                },
+                                error: function(data) {
+                                    swal({
+                                        type: 'error',
+                                        title: 'حدثت خلل أثناء العملية',
+                                        timer: 4000
+                                    });
+                                }
+                            });
+
+                        }
+
+                    });
+
+                //e.preventDefault();
+
+            });
+
+            var max_fields = 150;
+            var wrapperCat = $(".product_specification_Category");
+            var add_buttonCat = $(".add_form_field_Category");
+            var wrapperSub = $(".product_specification_Category .spec-item .spec-item_sub");
+            var add_buttons = $(".add_form_field_Category_Sub");
+            var x = 0;
+            var y = 0;
+            $(add_buttonCat).click(function(e) {
+                e.preventDefault();
+                if (x < max_fields) {
+                    x++;
+                    let html = '<div class="col-md-8" id="item-' + x + '">' +
+                        '                                <div class="input-group mt-2">' +
+                        '                                    <input type="hidden" value="0" name="categories[' + x + '][id]">' +
+                        '                                    <input type="text" required class="form-control" placeholder="التصنيف الرئيسي" name="categories[' + x + '][name]" aria-describedby="basic-addon1">';
+
+
+                    html = html + '' +
+                        '<a href="javascript:void(0)" class=" btn-danger delBtn" data-id="' + x + '" style="width: 40px;height: 37px;display: inline-block; text-align: center; line-height: 32px; margin-right: 10px;"><i class="fi-rr-trash"></i></a>' +
+                        '<div class="show_check_box">\n' +
+                        ' <label class="switchy switchy-sm">\n' +
+                        '  <input name="categories[' + x + '][is_shown_in_app_home]" checked="" type="checkbox" class="custom-control-input" id="customSwitch_show_' + x + '">\n' +
+                        '  <span draggable="true" for="customSwitch_show_' + x + '"></span>\n' +
+                        'إظهار التصنيف\n' +
+                        '  </label>\n' +
+                        '  </div>' +
+                        '</div>' +
+                        '<div class="row mt-3 fieldsSub spec-item_sub " data-parent="' + x + '" data-nums="1">' +
+                        '                                </div>' +
+                        '                                <div class="add_form_field_Category_Sub add-field-sub mb-2 mt-2" style="display:inline-block;"><a href="javascript:void(0)" class="btn btn-primary">اضافة فرعي</a></div>' +
+                        '' +
+                        '                            </div>';
+                    $('.categories_divs').append(html);
+                }
+            });
+            $(wrapperCat).on("click", ".delete", function(e) {
+                e.preventDefault();
+                $(this).parent().remove();
+                x--;
+            });
+            $(wrapperCat).on("click", '.add_form_field_Category_Sub', function(e) {
+                e.preventDefault();
+                if (y < max_fields) {
+                    y++;
+                    var index = $(this).parent().children('.spec-item_sub').first('.spec-item_sub').data('parent');
+                    var nums = $(this).parent().children('.spec-item_sub').first('.spec-item_sub').data('nums');
+                    // console.log(index);
+                    let html = '<div class="col-12" id="item-' + index + '_' + nums + 1 + '">' +
+                        '                                            <div class="input-group mb-2" style="max-width: 97%;margin-right: 3%;">' +
+                        '                                                <input type="text" required name="categories[' + index + '][subs][' + (nums + 1) + '][name]" class="form-control" placeholder="التصنيف الفرعي" aria-describedby="basic-addon1">' +
+                        '                                                <input type="hidden" name="categories[' + index + '][subs][' + (nums + 1) + '][id]" value="0">';
+                    html = html + '<a href="javascript:void(0)" class="deleteSub btn-danger deBtn"  style="width: 40px;height: 37px;display: inline-block; text-align: center; line-height: 32px; margin-right: 10px;">' +
+                        '                                                <i class="fi-rr-trash"></i>' +
+                        '                                            </a>' +
+                        '                                            </div>';
+                    html += '<div class="row mt-2 subSubCatDiv fieldsSub spec-item_sub" id="sub_item-' + index + '_' + nums + 1 + '" data-parent_parent="' + index + '" data-parent="' + parseInt(parseInt(nums) + 1) + '" data-nums="' + 0 + '"> ' +
+                        ' </div>';
+                    html += '<div class="add_form_field_Category_Sub_Sub add-field-sub mb-1 mt-1"><a href="javascript:void(0)" class="btn btn-primary">إضافة فرعي للفرعي</a></div>';
+
+
+
+                    html += '                                         </div>';
+                    $(this).parent().children('.spec-item_sub').first('.spec-item_sub').append(html); //add input box
+                    $(this).parent().children('.spec-item_sub').first('.spec-item_sub').data('nums', nums + 1);
+                }
+            });
+            $(wrapperCat).on("click", '.add_form_field_Category_Sub_Sub', function(e) {
+                e.preventDefault();
+                if (y < max_fields) {
+                    y++;
+                    var grand_index = $(this).parent().find('.spec-item_sub').data('parent_parent');
+                    var index = $(this).parent().find('.spec-item_sub').data('parent');
+                    var nums = $(this).parent().find('.spec-item_sub').data('nums');
+                    // console.log(index);
+                    let html = '<div class="col-12" id="item-' + index + '">' +
+                        '                                            <div class="input-group mb-2" style="max-width: 97%;margin-right: 3%;">' +
+                        '                                                <input type="text" required name="categories[' + grand_index + '][subs][' + (index) + '][subs][' + (nums + 1) + '][name]" class="form-control" placeholder="التصنيف الفرعي" aria-describedby="basic-addon1">' +
+                        '                                                <input type="hidden" name="categories[' + grand_index + '][subs][' + (index) + '][subs][' + (nums + 1) + '][id]" value="0">';
+                    html = html + '<a href="javascript:void(0)" class="deleteSubSub btn-danger deBtn"  style="width: 40px;height: 37px;display: inline-block; text-align: center; line-height: 32px; margin-right: 10px;">' +
+                        '                                                <i class="fi-rr-trash"></i>' +
+                        '                                            </a>' +
+                        '                                            </div>' +
+                        '                                         </div>';
+                    $(this).parent().find('.spec-item_sub').append(html); //add input box
+                    $(this).parent().find('.spec-item_sub').data('nums', nums + 1);
+                }
+            });
+            $(wrapperCat).on("click", ".deleteSub", function(e) {
+                e.preventDefault();
+                $("#sub_" + $(this).parent().parent().attr('id')).remove();
+                $(this).parent().parent().remove();
+                y--;
+            });
+            $(wrapperCat).on("click", ".deleteSubSub", function(e) {
+                e.preventDefault();
+                $(this).parent().parent().remove();
+            });
+            $(wrapperCat).on("click", ".delBtn", function(e) {
+                e.preventDefault();
+                $(this).parent().parent().remove();
+                y--;
+            });
+            var categorySelect = $('#mySelect2');
+
+        });
+        $('#form').validate();
+
+        $(document).on('click', '#save_btn', function() {
+            if ($("#form").valid()) {
+                $("#save_btn").addClass('has-spinner-link loading');
+                e.preventDefault();
+                $('#form').validate();
+                $('#form').submit();
+            }
+        });
+
+        // $('#save_btn').click(function (e) {
+        //     e.preventDefault();
+        //     $('#form').validate();
+        //     $('#form').submit();
+
+        // });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".alert").not('.discount').not('.alert-msg-custom').filter(function() {
+                return $(this).parent('td').length === 0
+            }).delay(6000).slideUp(200, function() {
+                $(this).alert('close');
+            });
+        });
+    </script>
+    <script>
+        try {
+            if ($('.sweet-5').length > 0) {
+                document.querySelector('.sweet-5').onclick = function() {
+                    swal({
+                            title: "",
+                            text: "هذه الخاصية غير متاحه فى باقتك , الرجاء ترقية باقتك لباقة أعلى لإتاحتها",
+                            type: "warning",
+                            confirmButtonText: 'الإطلاع على الباقات',
+                            cancelButtonText: "إلغاء",
+                            showCancelButton: true,
+                            confirmButtonClass: 'btn-success',
+                            closeOnConfirm: false,
+                            //closeOnCancel: false
+                        },
+                        function() {
+                            window.location.href = 'subscriptionPlan';
+                        });
+                };
+
+            }
+        } catch (e) {
+            //console.log(e);
+        }
+
+        $('#SelectAll').on('click', function() {
+            if ($(this).is(':checked')) {
+                $('.CheckedItem').each(function(i) {
+                    $(this).prop("checked", true);
+                });
+            } else {
+                $('.CheckedItem').each(function(i) {
+                    $(this).prop("checked", false);
+                });
+            }
+
+        });
+        $('#SelectAllSh').on('click', function() {
+            if ($(this).is(':checked')) {
+                $('.CheckedItemSh').each(function(i) {
+                    $(this).prop("checked", true);
+                });
+            } else {
+                $('.CheckedItemSh').each(function(i) {
+                    $(this).prop("checked", false);
+                });
+            }
+
+        });
+
+        $(document).ready(function() {
+            $('.DoAction').on('click', function() {
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                var val = [];
+                var i = 0;
+                $('.CheckedItem:checked').each(function(i) {
+                    //console.log($(this));
+                    val[i] = $(this).val();
+                });
+                if (val.length === 0 && $(this).data('action') != 'confirmBankTransfer') {
+                    swal({
+                        type: 'error',
+                        title: 'عذراً، يجب تحديد العناصر المراد اجراء العملية عليها',
+                        timer: 4000
+                    });
+                    return false;
+                }
+                // //console.log(val);
+                var desc = $(this).data('desc') ? $(this).data('desc') : '';
+                var url = $(this).data('url');
+                var token = $(this).data('token');
+
+                swal({
+                        title: "هل انت متأكد ؟",
+                        text: "هل تريد بالتأكيد تنفيذ العملية على العناصر المحددة" + '   ' + desc,
+                        type: "warning",
+                        cancelButtonColor: '#c54b42',
+                        confirmButtonClass: 'btn btn-success',
+                        cancelButtonClass: 'btn btn-gray',
+                        buttonsStyling: true,
+                        confirmButtonText: " نعم ",
+                        cancelButtonText: " لا ",
+                        showCancelButton: true
+                    },
+                    function() {
+                        //console.log(val);
+                        $.ajax({
+                            type: "POST",
+                            url: url,
+                            data: {
+                                id: val
+                            },
+                            success: function(data) {
+                                if (data.status === 0) {
+                                    swal({
+                                        type: 'error',
+                                        title: data.message,
+                                        timer: 4000
+                                    });
+                                } else {
+                                    if (url.indexOf('delete') !== -1) {
+
+                                        swal({
+                                                title: data.type ? '' : 'أحسنت!',
+                                                text: data.message ? data.message : 'تم تنفيذ العملية بنجاح',
+                                                type: data.type ? 'warning' : 'success',
+                                                timer: 2000,
+                                                showConfirmButton: true,
+                                                confirmButtonText: "تم",
+                                                confirmButtonClass: 'btn btn-success',
+                                                buttonsStyling: true,
+                                            },
+                                            function(result) {
+                                                if (result) {
+                                                    if ($('#total_items_tr').length > 0) {
+                                                        var total_items_count = parseInt($('#total_items_tr').text());
+                                                    } else {
+                                                        var total_items_count = 0;
+                                                    }
+                                                    for (var r = 0; r < data.ids.length; r++) {
+                                                        var ra = $('#item-' + data.ids[r]);
+                                                        ra.css('background', '#f00').fadeOut(600, function() {
+                                                            $(this).remove();
+                                                            var num = 1;
+                                                        });
+                                                    }
+                                                    var deleted = data.ids.length;
+                                                    var table = $('.table');
+                                                    var num = 1;
+                                                    table.find('.LOOPIDS').each(function() {
+                                                        $(this).text(num);
+                                                        num = num + 1;
+                                                    });
+                                                    if ($('#total_items_tr').length > 0) {
+                                                        total_items_count = total_items_count - deleted;
+                                                        $('#total_items_tr').text(total_items_count > 0 ? total_items_count : 0);
+                                                    }
+                                                }
+                                            }
+                                        )
+                                    } else if (url.indexOf('export') !== -1) {
+                                        swal({
+                                            title: 'أحسنت!',
+                                            text: 'تم تنفيذ العملية بنجاح',
+                                            type: 'success',
+                                            timer: 2000,
+                                            showConfirmButton: true,
+                                            confirmButtonText: "تم",
+                                            confirmButtonClass: 'btn btn-success',
+                                            buttonsStyling: true,
+                                        }, function() {
+                                            // window.location.href =data;
+                                            //     $.download('/path/resource/', 'data', JSON.stringify(data));
+                                            window.location.href = UrlForScripts + "/uploads/products/exports/" + data.file;
+                                        })
+                                    } else {
+                                        swal({
+                                            title: 'أحسنت!',
+                                            text: 'تم تنفيذ العملية بنجاح',
+                                            type: 'success',
+                                            timer: 2000,
+                                            showConfirmButton: true,
+                                            confirmButtonText: "تم",
+                                            confirmButtonClass: 'btn btn-success',
+                                            buttonsStyling: true,
+
+                                        }, function() {
+                                            location.reload();
+                                        });
+                                    }
+                                }
+                            },
+                            error: function(data) {
+                                swal({
+                                    type: 'error',
+                                    title: 'عذراً، حدثت خلل أثناء العملية',
+                                    timer: 4000
+                                });
+                            }
+                        });
+                    });
+            });
+            $('.DoActionOptional').on('click', function() {
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                var val = [];
+                var i = 0;
+                $('.CheckedItem:checked').each(function(i) {
+                    //console.log($(this));
+                    val[i] = $(this).val();
+                });
+
+                // //console.log(val);
+                var desc = $(this).data('desc') ? $(this).data('desc') : '';
+                var url = $(this).data('url');
+                var token = $(this).data('token');
+
+                swal({
+                        title: "هل انت متأكد ؟",
+                        text: "هل تريد بالتأكيد تنفيذ العملية على العناصر المحددة" + '   ' + desc,
+                        type: "warning",
+                        cancelButtonColor: '#c54b42',
+                        confirmButtonClass: 'btn btn-success',
+                        cancelButtonClass: 'btn btn-gray',
+                        buttonsStyling: true,
+                        confirmButtonText: " نعم ",
+                        cancelButtonText: " لا ",
+                        showCancelButton: true
+                    },
+                    function() {
+                        //console.log(val);
+                        $.ajax({
+                            type: "POST",
+                            url: url,
+                            data: {
+                                id: val
+                            },
+                            success: function(data) {
+                                if (data.status === 0) {
+                                    swal({
+                                        type: 'error',
+                                        title: data.message,
+                                        timer: 4000
+                                    });
+                                } else {
+                                    if (url.indexOf('delete') !== -1) {
+
+                                        swal({
+                                                title: data.type ? '' : 'أحسنت!',
+                                                text: data.message ? data.message : 'تم تنفيذ العملية بنجاح',
+                                                type: data.type ? 'warning' : 'success',
+                                                timer: 2000,
+                                                showConfirmButton: true,
+                                                confirmButtonText: "تم",
+                                                confirmButtonClass: 'btn btn-success',
+                                                buttonsStyling: true,
+                                            },
+                                            function(result) {
+                                                if (result) {
+                                                    if ($('#total_items_tr').length > 0) {
+                                                        var total_items_count = parseInt($('#total_items_tr').text());
+                                                    } else {
+                                                        var total_items_count = 0;
+                                                    }
+                                                    for (var r = 0; r < data.ids.length; r++) {
+                                                        var ra = $('#item-' + data.ids[r]);
+                                                        ra.css('background', '#f00').fadeOut(600, function() {
+                                                            $(this).remove();
+                                                            var num = 1;
+                                                        });
+                                                    }
+                                                    var deleted = data.ids.length;
+                                                    var table = $('.table');
+                                                    var num = 1;
+                                                    table.find('.LOOPIDS').each(function() {
+                                                        $(this).text(num);
+                                                        num = num + 1;
+                                                    });
+                                                    if ($('#total_items_tr').length > 0) {
+                                                        total_items_count = total_items_count - deleted;
+                                                        $('#total_items_tr').text(total_items_count > 0 ? total_items_count : 0);
+                                                    }
+                                                }
+                                            }
+                                        )
+                                    } else if (url.indexOf('export') !== -1) {
+                                        swal({
+                                            title: 'أحسنت!',
+                                            text: 'تم تنفيذ العملية بنجاح',
+                                            type: 'success',
+                                            timer: 2000,
+                                            showConfirmButton: true,
+                                            confirmButtonText: "تم",
+                                            confirmButtonClass: 'btn btn-success',
+                                            buttonsStyling: true,
+                                        }, function() {
+                                            // window.location.href =data;
+                                            //     $.download('/path/resource/', 'data', JSON.stringify(data));
+                                            window.location.href = UrlForScripts + "/uploads/products/exports/" + data.file;
+                                        })
+                                    } else {
+                                        swal({
+                                            title: 'أحسنت!',
+                                            text: 'تم تنفيذ العملية بنجاح',
+                                            type: 'success',
+                                            timer: 2000,
+                                            showConfirmButton: true,
+                                            confirmButtonText: "تم",
+                                            confirmButtonClass: 'btn btn-success',
+                                            buttonsStyling: true,
+
+                                        }, function() {
+                                            location.reload();
+                                        });
+                                    }
+                                }
+                            },
+                            error: function(data) {
+                                swal({
+                                    type: 'error',
+                                    title: 'عذراً، حدثت خلل أثناء العملية',
+                                    timer: 4000
+                                });
+                            }
+                        });
+                    });
+            });
+
+            $(".loader-modal").fadeOut(100);
+            // $(".my-alert-success").fadeOut(6000);
+            var dropify_image = $('.dropify-message p');
+            if ($('#ImportForm').length > 0) {
+                dropify_image.html('<span style="font-family:SSTArabic-Roman !important"> ' +
+                    'اضغط هنا لإختيار الملف' +
+                    '</span>'
+                );
+            } else {
+                dropify_image.html('<span style="font-family:SSTArabic-Roman !important"> ' +
+                    'اضغط هنا لإختيار الصورة' +
+                    '</span>'
+                );
+            }
+
+
+            $('.dropify-wrapper, .dropify-wrapper .dropify-clear').css('font-family', 'SST Arabic');
+            $('.dropify-wrapper>.dropify-message >.file-icon img').hide();
+            $('.dropify-message img').remove();
+            //$('.dropify-message .file-icon').css('color', '#7275d2!important;');
+            $('.button-menu-mobile').on('click', function() {
+                $('.logo-bx').toggle();
+                if ($(window).width() <= 768) {
+                    $('.rightbar-overlay').toggle();
+                }
+
+                // $('.rightbar-overlay').toggle();
+                // if($('body').hasClass('sidebar-enable')) {
+                //     $('.rightbar-overlay').show();
+                // } else {
+                //     $('.rightbar-overlay').hide();
+                // }
+            });
+
+
+        })
+        $('#padiOverlay').on('hidden.bs.modal', function() {
+            readBreakingNews();
+        });
+    </script>
+    <script>
+        $('#validation-Messages').fadeOut(200);
+    </script>
+    <div class='multi-action'>
+        <button class='action-button'><span class="fe-send"></span></button>
+        <ul class='actions'>
+            <li>
+                <a href="https://forms.gle/aUKw5Vnsx6QWzfpF6" target="_blank">
+<i class="fe-alert-circle" style="position: relative;
+            top: -2px;"></i> <span class="infoHelp">استبيان (سمعنا رأيك )</span> </a>
+            </li>
+            <li>
+                <a href="https://api.whatsapp.com/send?phone=966564207393" target="_blank"> <i class="mdi mdi-whatsapp" style="    position: relative;
+            top: -2px;"></i> <span class="infoHelp">تواصل معنا واتساب</span></a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        $(document).ready(function() {
+            // $('.material-button-toggle').on("click", function () {
+            //     $(this).toggleClass('open');
+            //     $('.option').toggleClass('scale-on');
+            // });
+            $('.action-button').on('click', function() {
+                $(this).toggleClass('active');
+            })
+        });
+    </script>
+    <audio id="PlAyAuDiO" src="https://mapp.sa/notify.mp3" autostart="false"></audio>
+    <script src="https://js.pusher.com/6.0/pusher.min.js"></script>
+    <script>
+        /*function log(msg) {
+                //  $('#logs').prepend('<div>' + msg + '</div>');
+                if (console && console.log) {
+                    console.log(msg);
+                }
+            }
+
+            Pusher.log = log;*/
+
+        $(function() {
+            // Get the Pusher app_key from the config
+
+            var pusher = new Pusher('53a47c96f6392447c750', {
+                cluster: 'ap2'
+            });
+            // subscribe to the channel and bind to the event triggered within trigger.php
+            let channel = pusher.subscribe('live' + '_store_channel_' + '193008');
+            channel.bind('new_order', function(data) {
+                var obj_id = data.obj_id; // Link is optional
+                if ($('#notification_' + obj_id).length == 0) {
+
+                    var sound = document.getElementById("PlAyAuDiO");
+                    sound.play();
+                    /*  swal({
+                          title:data.title,
+                          text:data.message,
+                          type: "warning",
+                          showCancelButton: false,
+                          confirmButtonClass: "btn-info",
+                          confirmButtonText: "حسناً",
+                          closeOnConfirm: true
+                      });*/
+
+
+                    // //console.log(data);
+                    link = data.link; // Link is optional
+
+                    duration = 5000; // Default duration is 5 seconds
+
+                    var notificationsWrapper = $('.store-notification-list-' + '193008');
+                    var notificationsToggle = notificationsWrapper.find('a[data-toggle]');
+                    var notificationsCountElem = notificationsToggle.find('span[data-count]');
+                    var notificationsCount = parseInt(notificationsWrapper.find('.noti-icon-badge').text());
+                    var notifications = notificationsWrapper.find('.noti-scroll');
+
+                    if (notificationsCount <= 0) {
+                        notificationsWrapper.hide();
+                    }
+                    var existingNotifications = notifications.html();
+                    var newNotificationHtml = '<a style="border-bottom: 1px solid #bfbfbf57;" href="' + link + '" id="notification_' + obj_id + '" class="dropdown-item notify-item active">' +
+                        '<p class="notify-details">' + data.title +
+                        '<small style="float: left;color:#80808052;">' +
+                        'الآن' +
+                        '</small> </p> <div class="clear"></div> <p class="text-muted mb-0 user-msg">' +
+                        '<small>' + data.message + '</small>' +
+                        ' </p>' +
+                        '</a>';
+
+                    notifications.html(newNotificationHtml + existingNotifications);
+
+                    notificationsCount += 1;
+                    notificationsCountElem.attr('data-count', notificationsCount);
+                    if (notificationsCount > 99) {
+                        notificationsWrapper.find('.noti-icon-badge').text('+99').css('display', 'block');
+                    } else {
+                        notificationsWrapper.find('.noti-icon-badge').text(notificationsCount).css('display', 'block');
+                    }
+                    notificationsWrapper.show();
+
+                    $('#notifi_kt_pulse').css('display', 'block');
+                }
+
+
+            });
+
+        });
+    </script>
+    <script>
+        $(document).on('click', '.notifications_count', function() {
+            $('#notifications_count_badge').html('<span data-count="0" class="badge badge-danger rounded-circle noti-icon-badge" style="display: none">0</span>');
+            $('#notifi_kt_pulse').css('display', 'none');
+            $.ajaxSetup({
+
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+
+            });
+            $.ajax({
+                type: "POST",
+                url: "/admin/setAdminNotificationsCountToZero",
+                success: function(data) {},
+                error: function(xhr, status, error) {},
+                complete: function() {}
+            });
+        });
+
+        $.ajaxSetup({
+
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+
+        });
+        $.ajax({
+            type: "POST",
+            url: "/admin/clearWelcomeMessage",
+            success: function(data) {},
+            error: function(xhr, status, error) {},
+            complete: function() {}
+        });
+    </script>
+    <script>
+        $(function() {
+            $('.closeBnr').on("click", function() {
+                $(this).parent().slideUp();
+            });
+            $('.copyStoreDemo').click(function(e) {
+                e.preventDefault();
+                var copyText = $('.storeDemo').attr('href');
+
+                document.addEventListener('copy', function(e) {
+                    e.clipboardData.setData('text/plain', copyText);
+                    e.preventDefault();
+                }, true);
+
+                document.execCommand('copy');
+                //    //console.log('copied text : ', copyText);
+                //    alert('copied text: ' + copyText);
+                $(this).addClass('copied');
+
+                setTimeout(function() {
+                    $('.copyStoreDemo').removeClass('copied');
+                }, 1000);
+
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#topBarQ').keyup(function(event) {
+                let data = $(this).val();
+                if (event.keyCode === 8 || event.keyCode === 46) {
+                    if (data.length === 0) {
+                        $('#adminList').fadeOut();
+                        $('#adminList').html('');
+                    }
+                }
+                if (data.length <= 2) {
+                    $('#adminList').fadeOut();
+                    $('#adminList').html('');
+                }
+                let admin_search_reference = $('#admin_search_reference').val();
+
+                let adminSearchUrl = "https://mapp.sa/admin/autoCompleteSearch/product";
+
+                if (admin_search_reference === "order") {
+                    adminSearchUrl = "https://mapp.sa/admin/autoCompleteSearch/order";
+                } else if (admin_search_reference === "client") {
+                    adminSearchUrl = "https://mapp.sa/admin/autoCompleteSearch/client";
+
+                }
+                if (data.length > 2) {
+                    let frescoTop = $('.fresco-div-top');
+                    frescoTop.html('<div class="container-fluid" id="fresco"><div class="timeline-wrapper customed"> <div class="wrapper-cell"> <div class="image"></div><div class="text"><div class="text-line sized"></div><div class="text-line"></div><div class="text-line"></div></div></div><div class="wrapper-cell"><div class="image"></div><div class="text"><div class="text-line sized"></div><div class="text-line"></div><div class="text-line"></div></div></div></div></div>');
+                    frescoTop.show();
+                    var _token = $('input[name="_token"]').val();
+                    $.ajax({
+                        url: adminSearchUrl,
+                        method: "POST",
+                        data: {
+                            data: data,
+                            _token: _token
+                        },
+                        success: function(data) {
+                            if (data.count != 0) {
+                                if (data.responseItems !== null) {
+                                    $('#adminList').fadeIn();
+                                    $('#adminList').html(data.responseItems);
+                                } else {
+                                    $('#adminList').fadeOut();
+                                    $('#adminList').html('');
+                                }
+                            } else {
+                                $('#adminList').fadeOut();
+                                $('#adminList').html('');
+                            }
+                        },
+                        complete: function() {
+                            setTimeout(function() {
+                                frescoTop.hide();
+                                frescoTop.empty();
+                            }, 300);
+                        },
+                        error: function(data) {
+                            alert('Something Error');
+                        }
+                    });
+                }
+            });
+
+            $(document).on('click', '.autocomplete-result-row', function() {
+                $('#topBarQ').val($(this).data('text'));
+                $('#adminList').fadeOut();
+                $('#topBarQ').closest("form").submit();
+            });
+
+        });
+    </script>
+    <script>
+        $(function() {
+            var clipboard = new ClipboardJS('.copyBtnCode');
+            clipboard.on('success', function(e) {
+                e.clearSelection();
+            });
+        });
+
+        $(function() {
+            $('.copyBtnCode').on('click', function() {
+                var divs = '<div class="copiedAlert" style="padding:5px;    position: absolute;    top: -30px;left: -8px;;white-space: nowrap;"><strong style="color: #5051a4;font-size:13px;"><span class="fe-check"></span> تم النسخ</strong></div>'
+                $(this).parent().append(divs);
+                setTimeout(function() {
+                    $('.copiedAlert').hide();
+                }, 1000);
+            });
+        })
+    </script>
+    <script>
+        // Dark Mode
+        const darkBtn = document.querySelector("#dark-theme-toggle");
+        darkBtn.addEventListener("change", (e) => {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                type: "POST",
+                url: "https://mapp.sa/admin/enableDarkMode",
+                success: function(data) {
+                    location.reload();
+                },
+                error: function(xhr, status, error) {},
+                complete: function() {}
+            });
+        });
+    </script>
+    <script>
+        let spinnerButtonLinks = document.querySelectorAll('.has-spinner-link');
+        for (let i = 0; i < spinnerButtonLinks.length; i++) {
+            spinnerButtonLinks[i].addEventListener('click', function(event) {
+                let href = this.getAttribute("href");
+                if (href) {
+                    event.preventDefault();
+                    this.classList.add('loading');
+                    setTimeout(() => {
+                        window.location.href = href;
+                        this.classList.remove('loading');
+                    }, 500);
+                }
+            });
+        }
+    </script>
+
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v2b4487d741ca48dcbadcaf954e159fc61680799950996" integrity="sha512-D/jdE0CypeVxFadTejKGTzmwyV10c1pxZk/AqjJuZbaJwGMyNHY3q/mTPWqMUnFACfCTunhZUVcd4cV78dK1pQ==" data-cf-beacon='{"rayId":"7b5d84144e1d4897","token":"92b7595127524c71a35d4b9fbeae802d","version":"2023.3.0","si":100}'
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
